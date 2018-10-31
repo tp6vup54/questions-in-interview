@@ -16,6 +16,8 @@ for i in range(len(nums) - 3):
 Since under a loop, number of digits need to be found is 3, exactly the same as 3Sum.
 The complexity of 3Sum is `n^2` in my solution, so the entire complexity is `n^3`.
 
+In leetcode assessment, it can faster than approximately 25% submissions.
+
 ## Solution3 - 2Sum based
 This solution is almost the same as previous one, just add another nested loop.
 ```
@@ -23,6 +25,6 @@ for i in range(len(nums) - 3):
     for j in range(len(nums) - 2):
         2Sum(...)
 ```
-The complexity of 2Sum is `n`, so the entire complexity is `n^3`, same as previous.
+The complexity of 2Sum is `n`, so the entire complexity is `n^3`, same as previous, but I tried to add some improvements to make it a little faster, [#62](https://github.com/tp6vup54/questions-in-interview/blob/master/2.%204Sum%20solutions/Solution.py#L62), [#65](https://github.com/tp6vup54/questions-in-interview/blob/master/2.%204Sum%20solutions/Solution.py#L65), [#68](https://github.com/tp6vup54/questions-in-interview/blob/master/2.%204Sum%20solutions/Solution.py#L68) and [#70](https://github.com/tp6vup54/questions-in-interview/blob/master/2.%204Sum%20solutions/Solution.py#L70), they help to ignore some unnecessary iterations.
 
-But I tried to add some little improvements to make it faster, 
+These little improvements make it faster than approximately 50% submissions.
