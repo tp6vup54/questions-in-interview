@@ -28,3 +28,14 @@ for i in range(len(nums) - 3):
 The complexity of 2Sum is `n`, so the entire complexity is `n^3`, same as previous, but I tried to add some improvements to make it a little faster, [#62](https://github.com/tp6vup54/questions-in-interview/blob/master/2.%204Sum%20solutions/Solution.py#L62), [#65](https://github.com/tp6vup54/questions-in-interview/blob/master/2.%204Sum%20solutions/Solution.py#L65), [#68](https://github.com/tp6vup54/questions-in-interview/blob/master/2.%204Sum%20solutions/Solution.py#L68) and [#70](https://github.com/tp6vup54/questions-in-interview/blob/master/2.%204Sum%20solutions/Solution.py#L70), they help to ignore some unnecessary iterations.
 
 These little improvements make it faster than approximately 50% submissions.
+
+## Conclusion
+Base on previous solutions, all of the k-Sum problems can be solved by 2Sum or 3Sum with recursive.
+```
+def solution(nums, n):
+    if n > 3:
+        for i in range(len(nums) - n + 1):
+            solution(nums[i + 1:], n - 1)
+    else:
+        3Sum(...)
+```
