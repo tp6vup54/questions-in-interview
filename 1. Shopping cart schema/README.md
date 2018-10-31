@@ -1,8 +1,8 @@
 # Shopping cart schema
 ## ER Disgram
-<img src="https://i.imgur.com/fmldsvK.png"/>
+<img src="https://i.imgur.com/BmrfRGc.png"/>
 
-For the index in `tb_item`, I think `ItemName`, `ImageUri` and  `Price` are often be queried in the system, including order history page drill down and item detail page, make them be indexed should let these kinds of queries faster.
+For the index in `tb_Item`, since a searching engine must be implemented in a shopping system, `ItemName` and `Price` are the most frequent used in searching, make them be indexed should let these kinds of queries faster.
 
 ## scenarios.sql
 
